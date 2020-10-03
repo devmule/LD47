@@ -36,6 +36,26 @@
 			"sid": 221777240097139
 		},
 		{
+			"eventType": "variable",
+			"name": "IS_TIME",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 762378800658297
+		},
+		{
+			"eventType": "variable",
+			"name": "IS_WIN",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 793000293171928
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -58,6 +78,14 @@
 					"id": "set-visible",
 					"objectClass": "sCamera",
 					"sid": 808372228082330,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "sLaserSolid",
+					"sid": 691515875046699,
 					"parameters": {
 						"visibility": "invisible"
 					}
@@ -99,6 +127,14 @@
 					"id": "every-tick",
 					"objectClass": "System",
 					"sid": 323890593731981
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 321825986053301,
+					"parameters": {
+						"variable": "IS_TIME"
+					}
 				}
 			],
 			"actions": [
@@ -290,10 +326,10 @@
 						{
 							"id": "spawn-another-object",
 							"objectClass": "sTimeMachine",
-							"sid": 138164543626923,
+							"sid": 132419684897688,
 							"parameters": {
 								"object": "sPlayer",
-								"layer": "0",
+								"layer": "\"game\"",
 								"image-point": "0"
 							}
 						},
@@ -303,6 +339,14 @@
 							"sid": 816639931691340,
 							"parameters": {
 								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-spraying",
+							"objectClass": "pBlood",
+							"sid": 372492778813697,
+							"parameters": {
+								"state": "not-spraying"
 							}
 						},
 						{

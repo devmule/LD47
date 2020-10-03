@@ -1,0 +1,25 @@
+{
+	"name": "centerSoft",
+	"transitionKeyframes": [
+		{
+			"x": 0,
+			"y": 0,
+			"sax": 0,
+			"say": 0.5,
+			"eax": 0,
+			"eay": 0,
+			"se": true,
+			"ee": false
+		},
+		{
+			"x": 1,
+			"y": 1,
+			"sax": 0,
+			"say": 0,
+			"eax": 0,
+			"eay": -0.5,
+			"se": false,
+			"ee": true
+		}
+	]
+}

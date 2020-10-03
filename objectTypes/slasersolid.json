@@ -1,16 +1,10 @@
 {
-	"name": "sSolid",
+	"name": "sLaserSolid",
 	"plugin-id": "Sprite",
-	"sid": 150907194942290,
+	"sid": 762347650599560,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "solid",
-			"name": "Solid",
-			"sid": 967323039307838
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -24,12 +18,12 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 9546755,
+						"imageSpriteId": 862373,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 666619436434123,
+				"sid": 359713371166741,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

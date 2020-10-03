@@ -16,6 +16,10 @@
 		{
 			"eventType": "include",
 			"includeSheet": "eGame"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "eMenu"
 		}
 	],
 	"sid": 315213485216492

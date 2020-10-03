@@ -55,6 +55,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"version": "r218",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
@@ -117,12 +125,28 @@
 			"author": "Scirra",
 			"version": "r218",
 			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "blurhorizontal",
+			"name": "Blur horizontal",
+			"author": "Scirra",
+			"version": "r218",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "blurvertical",
+			"name": "Blur vertical",
+			"author": "Scirra",
+			"version": "r218",
+			"bundled": false
 		}
 	],
 	"uniqueId": "lexi8nejz72",
 	"objectTypes": {
 		"items": [
-			"sSolid",
+			"sWall",
 			"sPlayer",
 			"sTimeMachine",
 			"tTillNextTravel",
@@ -136,7 +160,15 @@
 			"pSpawnEffects",
 			"sCamera",
 			"sSolidDoor",
-			"sPlayerVis"
+			"sPlayerVis",
+			"pBlood",
+			"sWinButton",
+			"sShifretImage",
+			"sLaserSolid",
+			"sBackGround",
+			"Sprite",
+			"Touch",
+			"Text"
 		],
 		"subfolders": []
 	},
@@ -145,6 +177,7 @@
 		{
 			"members": [
 				"jsonTrackings",
+				"pBlood",
 				"sPlayer",
 				"sPlayerVis"
 			],
@@ -178,8 +211,8 @@
 			"eTimeState",
 			"eMain",
 			"eBinary",
-			"eMenu",
-			"eGame"
+			"eGame",
+			"eMenu"
 		],
 		"subfolders": []
 	},
@@ -274,7 +307,9 @@
 		"items": [],
 		"subfolders": [
 			{
-				"items": [],
+				"items": [
+					"centerSoft"
+				],
 				"subfolders": []
 			}
 		]

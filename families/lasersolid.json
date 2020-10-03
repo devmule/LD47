@@ -13,7 +13,7 @@
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"members": [
-		"sSolid",
-		"sSolidDoor"
+		"sSolidDoor",
+		"sLaserSolid"
 	]
 }

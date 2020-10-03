@@ -1,27 +1,14 @@
 {
-	"name": "sSolidDoor",
+	"name": "sWall",
 	"plugin-id": "Sprite",
-	"sid": 980109576505297,
+	"sid": 150907194942290,
 	"isGlobal": false,
-	"instanceVariables": [
-		{
-			"name": "btnUID",
-			"type": "number",
-			"desc": "",
-			"sid": 834634119886129
-		},
-		{
-			"name": "isInverted",
-			"type": "boolean",
-			"desc": "",
-			"sid": 438215868960295
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "solid",
 			"name": "Solid",
-			"sid": 966499991671964
+			"sid": 967323039307838
 		}
 	],
 	"effectTypes": [],
@@ -30,14 +17,14 @@
 			{
 				"frames": [
 					{
-						"width": 128,
-						"height": 64,
+						"width": 64,
+						"height": 32,
 						"originX": 0,
 						"originY": 0,
 						"originalSource": "C:\\Users\\79227\\Desktop\\drive-download-20201003T162228Z-001\\пол1.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6385081,
+						"imageSpriteId": 4891790,
 						"collisionPoly": {
 							"points": [
 								0,
@@ -62,14 +49,14 @@
 						"duration": 1
 					},
 					{
-						"width": 128,
-						"height": 64,
+						"width": 64,
+						"height": 32,
 						"originX": 0,
 						"originY": 0,
 						"originalSource": "C:\\Users\\79227\\Desktop\\drive-download-20201003T162228Z-001\\пол2.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7265756,
+						"imageSpriteId": 6662203,
 						"collisionPoly": {
 							"points": [
 								0,
@@ -94,7 +81,7 @@
 						"duration": 1
 					}
 				],
-				"sid": 816464549014694,
+				"sid": 666619436434123,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

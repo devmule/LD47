@@ -1,0 +1,89 @@
+{
+	"name": "sWinButton",
+	"plugin-id": "Sprite",
+	"sid": 578546749035987,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 203,
+						"height": 217,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\79227\\Desktop\\drive-download-20201003T162228Z-001\\КнопкаСтена1.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9372697,
+						"collisionPoly": {
+							"points": [
+								0.006157635467980296,
+								0.03341013824884793,
+								0.4827586206896552,
+								0.00576036866359447,
+								0.9876847290640394,
+								0.00576036866359447,
+								0.9938423645320197,
+								0.4792626728110599,
+								0.9938423645320197,
+								0.9573732718894009,
+								0.4827586206896552,
+								0.9942396313364056,
+								0.006157635467980296,
+								0.923963133640553,
+								0.006157635467980296,
+								0.4792626728110599
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 203,
+						"height": 217,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\79227\\Desktop\\drive-download-20201003T162228Z-001\\КнопкаСтена2.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 155218,
+						"collisionPoly": {
+							"points": [
+								0.006157635467980296,
+								0.03341013824884793,
+								0.4827586206896552,
+								0.00576036866359447,
+								0.9876847290640394,
+								0.00576036866359447,
+								0.9938423645320197,
+								0.4792626728110599,
+								0.9938423645320197,
+								0.9573732718894009,
+								0.4827586206896552,
+								0.9942396313364056,
+								0.006157635467980296,
+								0.923963133640553,
+								0.006157635467980296,
+								0.4792626728110599
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 793316478554287,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

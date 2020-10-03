@@ -1,5 +1,255 @@
 {
 	"name": "eMenu",
-	"events": [],
-	"sid": 727123016111944
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "eBinary"
+		},
+		{
+			"eventType": "variable",
+			"name": "IS_CHANGING_LEVEL",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 556570716098941
+		},
+		{
+			"eventType": "variable",
+			"name": "CHANGING_LEVEL_T",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 395602772335619
+		},
+		{
+			"eventType": "variable",
+			"name": "CHANGING_LEVEL_NAME",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 620263502134582
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "levels changing",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "goToLevel",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "levelName",
+							"type": "string",
+							"initialValue": "lvl1",
+							"comment": "",
+							"sid": 790841693772743
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 635297902280624,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 553006599220403,
+									"parameters": {
+										"variable": "IS_CHANGING_LEVEL"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 933932724098826,
+									"parameters": {
+										"variable": "IS_CHANGING_LEVEL",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 247268543468721,
+									"parameters": {
+										"variable": "CHANGING_LEVEL_T",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 710605628079597,
+									"parameters": {
+										"variable": "CHANGING_LEVEL_NAME",
+										"value": "levelName"
+									}
+								}
+							],
+							"sid": 309518759752338
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 936607264113509
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text",
+							"sid": 612054612816776,
+							"parameters": {
+								"text": "CHANGING_LEVEL_NAME"
+							}
+						}
+					],
+					"sid": 547812542610880,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 656282363973674,
+									"parameters": {
+										"variable": "IS_CHANGING_LEVEL"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 305567497934070,
+									"parameters": {
+										"variable": "CHANGING_LEVEL_T",
+										"value": "dt"
+									}
+								},
+								{
+									"id": "set-y",
+									"objectClass": "sShifretImage",
+									"sid": 348898927540957,
+									"parameters": {
+										"y": "LayoutHeight + Functions.easeGoodCenter(CHANGING_LEVEL_T) * (- sShifretImage.Height- LayoutHeight )"
+									}
+								}
+							],
+							"sid": 554221916130116,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 914979367164407,
+											"parameters": {
+												"variable": "CHANGING_LEVEL_T",
+												"comparison": 4,
+												"value": "0.5"
+											}
+										},
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 412867381965370
+										}
+									],
+									"actions": [
+										{
+											"id": "go-to-layout-by-name",
+											"objectClass": "System",
+											"sid": 423997257213323,
+											"parameters": {
+												"layout": "CHANGING_LEVEL_NAME"
+											}
+										}
+									],
+									"sid": 602406066827110
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 686247846258033,
+											"parameters": {
+												"variable": "CHANGING_LEVEL_T",
+												"comparison": 5,
+												"value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 388201457538358,
+											"parameters": {
+												"variable": "IS_CHANGING_LEVEL",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 677170458050426
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 413767369214083
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 246487158372330,
+					"parameters": {
+						"object": "Sprite"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "goToLevel",
+					"sid": 600365873808146,
+					"parameters": [
+						"\"lvl1\""
+					]
+				}
+			],
+			"sid": 545259196918351
+		}
+	],
+	"sid": 454245107823311
 }

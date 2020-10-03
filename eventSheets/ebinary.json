@@ -132,6 +132,39 @@
 					"sid": 760870628699494
 				}
 			]
+		},
+		{
+			"functionName": "easeGoodCenter",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "number",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "t",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 243010942021744
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"type": "script",
+					"script": "let t = localVars.t;\nlocalVars.t = t < .5 ? Math.sin(Math.PI*t)/2 : 1 - Math.sin(Math.PI * (1-t)) / 2;"
+				},
+				{
+					"id": "set-function-return-value",
+					"objectClass": "Functions",
+					"sid": 655315514819359,
+					"parameters": {
+						"value": "t"
+					}
+				}
+			],
+			"sid": 483409654070654
 		}
 	],
 	"sid": 295486252516740
