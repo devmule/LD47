@@ -1,0 +1,14 @@
+{
+	"name": "eMain",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ePlayer"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "eTimeState"
+		}
+	],
+	"sid": 315213485216492
+}

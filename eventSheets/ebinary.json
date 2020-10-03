@@ -1,0 +1,138 @@
+{
+	"name": "eBinary",
+	"events": [
+		{
+			"functionName": "getByIndex",
+			"functionDescription": "",
+			"functionCategory": "binary",
+			"functionReturnType": "number",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "number",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 757947322975099
+				},
+				{
+					"name": "index",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 201332824760105
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 823302897990059,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "ret",
+					"type": "boolean",
+					"initialValue": "false",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 226726737724873
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"type": "script",
+							"script": "localVars.ret = ((localVars.number % Math.pow(2, localVars.index + 1)) /\nMath.pow(2, localVars.index)) >= 1;"
+						},
+						{
+							"id": "set-function-return-value",
+							"objectClass": "Functions",
+							"sid": 225674634320081,
+							"parameters": {
+								"value": "int(ret)"
+							}
+						}
+					],
+					"sid": 705535936935672
+				}
+			]
+		},
+		{
+			"functionName": "setByIndex",
+			"functionDescription": "",
+			"functionCategory": "binary",
+			"functionReturnType": "number",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "number",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 856245122707848
+				},
+				{
+					"name": "index",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 485028935536728
+				},
+				{
+					"name": "val",
+					"type": "boolean",
+					"initialValue": "false",
+					"comment": "",
+					"sid": 240722364274965
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 690101740673005,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "curVal",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 184572538328776
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 786916551012169,
+							"parameters": {
+								"variable": "curVal",
+								"value": "Functions.getByIndex(number, index)"
+							}
+						},
+						{
+							"type": "script",
+							"script": "if (localVars.curVal & !localVars.val) \n\tlocalVars.number -= Math.pow(2, localVars.index)\nif (!localVars.curVal & localVars.val) \n\tlocalVars.number += Math.pow(2, localVars.index)"
+						},
+						{
+							"id": "set-function-return-value",
+							"objectClass": "Functions",
+							"sid": 671293275260760,
+							"parameters": {
+								"value": "number"
+							}
+						}
+					],
+					"sid": 760870628699494
+				}
+			]
+		}
+	],
+	"sid": 295486252516740
+}

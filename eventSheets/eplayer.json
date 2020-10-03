@@ -1,0 +1,450 @@
+{
+	"name": "ePlayer",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "eBinary"
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "moving",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "pressKey",
+					"functionDescription": "",
+					"functionCategory": "moving",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "key",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 755112879365308
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 204811161275388,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "sPlayer",
+									"sid": 952515448806109,
+									"parameters": {
+										"unique-id": "PLAYING_UID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "sPlayer",
+									"sid": 804059439640967,
+									"parameters": {
+										"instance-variable": "eventState",
+										"value": "Functions.setByIndex(sPlayer.eventState, key, 1)"
+									}
+								},
+								{
+									"callFunction": "savePlayerState",
+									"sid": 527044514239632
+								}
+							],
+							"sid": 836953832612124
+						}
+					]
+				},
+				{
+					"functionName": "releaseKey",
+					"functionDescription": "",
+					"functionCategory": "moving",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "key",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 652086698537211
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 973443150690354,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "sPlayer",
+									"sid": 205774090918499,
+									"parameters": {
+										"unique-id": "PLAYING_UID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "sPlayer",
+									"sid": 493432172547859,
+									"parameters": {
+										"instance-variable": "eventState",
+										"value": "Functions.setByIndex(sPlayer.eventState, key, 0)"
+									}
+								},
+								{
+									"callFunction": "savePlayerState",
+									"sid": 111983392002226
+								}
+							],
+							"sid": 958795289642849
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 710058849613599,
+							"parameters": {
+								"object": "sPlayer"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 195083939672032,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 226813239993714,
+									"parameters": {
+										"first-value": "Functions.getByIndex(sPlayer.eventState, 0)",
+										"comparison": 1,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"type": "comment",
+									"text": "влево"
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "sPlayer",
+									"sid": 457746250702666,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "left"
+									}
+								}
+							],
+							"sid": 201814750917409
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 932538812629212,
+									"parameters": {
+										"first-value": "Functions.getByIndex(sPlayer.eventState, 2)",
+										"comparison": 1,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"type": "comment",
+									"text": "вправо"
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "sPlayer",
+									"sid": 100853179947090,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "right"
+									}
+								}
+							],
+							"sid": 483073498135487
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 611320722416194,
+									"parameters": {
+										"first-value": "Functions.getByIndex(sPlayer.eventState, 1)",
+										"comparison": 1,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"type": "comment",
+									"text": "прыжок"
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "sPlayer",
+									"sid": 548080843411455,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "jump"
+									}
+								}
+							],
+							"sid": 710050225625084
+						}
+					]
+				}
+			],
+			"sid": 613170487469452
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "keyboard",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 250967237447488,
+							"parameters": {
+								"key": 65
+							}
+						},
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 277931549325740,
+							"parameters": {
+								"key": 37
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "pressKey",
+							"sid": 465123145987663,
+							"parameters": [
+								"0"
+							]
+						}
+					],
+					"sid": 343432184228628,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 558763308363411,
+							"parameters": {
+								"key": 68
+							}
+						},
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 585544221155689,
+							"parameters": {
+								"key": 39
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "pressKey",
+							"sid": 147275533596051,
+							"parameters": [
+								"2"
+							]
+						}
+					],
+					"sid": 109107074191344,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 240036802401798,
+							"parameters": {
+								"key": 87
+							}
+						},
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 198623521960259,
+							"parameters": {
+								"key": 32
+							}
+						},
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 719592125948473,
+							"parameters": {
+								"key": 38
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "pressKey",
+							"sid": 429573728315071,
+							"parameters": [
+								"1"
+							]
+						}
+					],
+					"sid": 433717098957247,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-released",
+							"objectClass": "Keyboard",
+							"sid": 480625525777532,
+							"parameters": {
+								"key": 65
+							}
+						},
+						{
+							"id": "on-key-released",
+							"objectClass": "Keyboard",
+							"sid": 136287634228952,
+							"parameters": {
+								"key": 37
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "releaseKey",
+							"sid": 503489595588304,
+							"parameters": [
+								"0"
+							]
+						}
+					],
+					"sid": 546963395022672,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-released",
+							"objectClass": "Keyboard",
+							"sid": 776622493359859,
+							"parameters": {
+								"key": 68
+							}
+						},
+						{
+							"id": "on-key-released",
+							"objectClass": "Keyboard",
+							"sid": 510480233319126,
+							"parameters": {
+								"key": 39
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "releaseKey",
+							"sid": 903100932987455,
+							"parameters": [
+								"2"
+							]
+						}
+					],
+					"sid": 661146769126012,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-released",
+							"objectClass": "Keyboard",
+							"sid": 417089002143794,
+							"parameters": {
+								"key": 87
+							}
+						},
+						{
+							"id": "on-key-released",
+							"objectClass": "Keyboard",
+							"sid": 674171772475274,
+							"parameters": {
+								"key": 32
+							}
+						},
+						{
+							"id": "on-key-released",
+							"objectClass": "Keyboard",
+							"sid": 510418398147617,
+							"parameters": {
+								"key": 38
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "releaseKey",
+							"sid": 300330811110088,
+							"parameters": [
+								"1"
+							]
+						}
+					],
+					"sid": 199036783149016,
+					"isOrBlock": true
+				}
+			],
+			"sid": 984340859403277
+		}
+	],
+	"sid": 129355630556374
+}

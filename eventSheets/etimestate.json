@@ -1,0 +1,458 @@
+{
+	"name": "eTimeState",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "eBinary"
+		},
+		{
+			"eventType": "variable",
+			"name": "TIME_PER_CYCLE_SEC",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 308252877181422
+		},
+		{
+			"eventType": "variable",
+			"name": "cycle_time",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 865839920802948
+		},
+		{
+			"eventType": "variable",
+			"name": "PLAYING_UID",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 221777240097139
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 607457539843099
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "sPlayer",
+					"sid": 839468752114893
+				},
+				{
+					"callFunction": "timeBegin",
+					"sid": 242099557430125
+				}
+			],
+			"sid": 289524827197381
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 323890593731981
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 734201956072339,
+					"parameters": {
+						"variable": "cycle_time",
+						"value": "dt"
+					}
+				}
+			],
+			"sid": 537121919587474,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 945700378642165,
+							"parameters": {
+								"variable": "cycle_time",
+								"comparison": 4,
+								"value": "TIME_PER_CYCLE_SEC"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "timeBegin",
+							"sid": 574995944675018
+						}
+					],
+					"sid": 833693394044189
+				}
+			]
+		},
+		{
+			"functionName": "timeBegin",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 934703679248590,
+					"parameters": {
+						"variable": "cycle_time",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 112138618588662,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 150523371172039,
+							"parameters": {
+								"object": "sPlayer"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-vector-x",
+							"objectClass": "sPlayer",
+							"sid": 398807225090955,
+							"behaviorType": "Platform",
+							"parameters": {
+								"vector-x": "0"
+							}
+						},
+						{
+							"id": "set-vector-x",
+							"objectClass": "sPlayer",
+							"sid": 826017460420812,
+							"behaviorType": "Platform",
+							"parameters": {
+								"vector-x": "0"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "sPlayer",
+							"sid": 822247300369761,
+							"parameters": {
+								"x": "sTimeMachine.X",
+								"y": "sTimeMachine.Y"
+							}
+						}
+					],
+					"sid": 367104049306826,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "jsonTrackings",
+									"sid": 805436049560886,
+									"parameters": {
+										"path": "\"states\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "setStateAfterTme",
+									"sid": 917435738095606,
+									"parameters": [
+										"sPlayer.UID",
+										"jsonTrackings.Get(\"states.\"&jsonTrackings.CurrentKey&\".time\")",
+										"jsonTrackings.Get(\"states.\"&jsonTrackings.CurrentKey&\".state\")",
+										"jsonTrackings.Get(\"states.\"&jsonTrackings.CurrentKey&\".coords.x\")",
+										"jsonTrackings.Get(\"states.\"&jsonTrackings.CurrentKey&\".coords.y\")"
+									]
+								}
+							],
+							"sid": 727362584079963
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "sTimeMachine",
+							"sid": 138164543626923,
+							"parameters": {
+								"object": "sPlayer",
+								"layer": "0",
+								"image-point": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 173791763153663,
+							"parameters": {
+								"variable": "PLAYING_UID",
+								"value": "sPlayer.UID"
+							}
+						},
+						{
+							"id": "set-path",
+							"objectClass": "jsonTrackings",
+							"sid": 112228667208351,
+							"parameters": {
+								"path": "\"states\""
+							}
+						},
+						{
+							"id": "set-array",
+							"objectClass": "jsonTrackings",
+							"sid": 779754027950585,
+							"parameters": {
+								"path": "\".\"",
+								"size": "0"
+							}
+						},
+						{
+							"callFunction": "savePlayerState",
+							"sid": 253862947864478
+						}
+					],
+					"sid": 942224128443172
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "\n\nобновление записей для управляемого персонажа"
+		},
+		{
+			"functionName": "savePlayerState",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 508240096446146,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "index",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 116259255272539
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "sPlayer",
+							"sid": 521030215220052,
+							"parameters": {
+								"unique-id": "PLAYING_UID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-path",
+							"objectClass": "jsonTrackings",
+							"sid": 149787289841616,
+							"parameters": {
+								"path": "\"states\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 881131856431007,
+							"parameters": {
+								"variable": "index",
+								"value": "jsonTrackings.ArraySize(\".\")"
+							}
+						},
+						{
+							"id": "set-array",
+							"objectClass": "jsonTrackings",
+							"sid": 358876840280009,
+							"parameters": {
+								"path": "\".\"",
+								"size": "index + 1"
+							}
+						},
+						{
+							"id": "set-object",
+							"objectClass": "jsonTrackings",
+							"sid": 608032324038137,
+							"parameters": {
+								"path": "\".\"&index"
+							}
+						},
+						{
+							"id": "set-value",
+							"objectClass": "jsonTrackings",
+							"sid": 861176910469047,
+							"parameters": {
+								"path": "\".\"&index&\".time\"",
+								"value": "cycle_time"
+							}
+						},
+						{
+							"id": "set-value",
+							"objectClass": "jsonTrackings",
+							"sid": 213428618614777,
+							"parameters": {
+								"path": "\".\"&index&\".state\"",
+								"value": "sPlayer.eventState"
+							}
+						},
+						{
+							"id": "set-value",
+							"objectClass": "jsonTrackings",
+							"sid": 233171260301976,
+							"parameters": {
+								"path": "\".\"&index&\".coords.x\"",
+								"value": "sPlayer.X"
+							}
+						},
+						{
+							"id": "set-value",
+							"objectClass": "jsonTrackings",
+							"sid": 653530640966542,
+							"parameters": {
+								"path": "\".\"&index&\".coords.y\"",
+								"value": "sPlayer.Y"
+							}
+						}
+					],
+					"sid": 262678692249052
+				}
+			]
+		},
+		{
+			"functionName": "setStateAfterTme",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": true,
+			"functionParameters": [
+				{
+					"name": "UID",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 366288543810988
+				},
+				{
+					"name": "timeWait",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 539874086484476
+				},
+				{
+					"name": "state",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 628676414636029
+				},
+				{
+					"name": "x",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 756934127688398
+				},
+				{
+					"name": "y",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 614535289496089
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 282281834503868,
+					"parameters": {
+						"seconds": "timeWait"
+					}
+				}
+			],
+			"sid": 715821549573029,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "sPlayer",
+							"sid": 771524844949640,
+							"parameters": {
+								"unique-id": "UID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "sPlayer",
+							"sid": 686152029078342,
+							"parameters": {
+								"instance-variable": "eventState",
+								"value": "state"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "sPlayer",
+							"sid": 121611214158747,
+							"parameters": {
+								"x": "x",
+								"y": "y"
+							}
+						}
+					],
+					"sid": 965727146449236
+				}
+			]
+		}
+	],
+	"sid": 132432521391133
+}
