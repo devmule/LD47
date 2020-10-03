@@ -1,0 +1,618 @@
+{
+	"name": "eGame",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "laser",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "isLaserCollide",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "number",
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "UID",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 311663721069820
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 715873558705754,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "sLaser",
+									"sid": 199786611111119,
+									"parameters": {
+										"unique-id": "UID"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 433977226680859,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-overlapping-another-object",
+											"objectClass": "sLaser",
+											"sid": 524289966124457,
+											"parameters": {
+												"object": "laserSolid"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "laserSolid",
+											"sid": 728292017589076,
+											"parameters": {
+												"instance-variable": "isSolid"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-function-return-value",
+											"objectClass": "Functions",
+											"sid": 468734432580846,
+											"parameters": {
+												"value": "1"
+											}
+										}
+									],
+									"sid": 490849233567620
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 284529593451117
+										}
+									],
+									"actions": [
+										{
+											"id": "set-function-return-value",
+											"objectClass": "Functions",
+											"sid": 779775859093254,
+											"parameters": {
+												"value": "0"
+											}
+										}
+									],
+									"sid": 638849345672907
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 209691592606795
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "sLaser",
+							"sid": 695519097705016,
+							"parameters": {
+								"angle": "sLaserGun.Angle"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "sLaser",
+							"sid": 115220997785621,
+							"parameters": {
+								"object": "sLaserGun",
+								"image-point-optional": "1"
+							}
+						},
+						{
+							"id": "set-angle-toward-position",
+							"objectClass": "pLaserParticles",
+							"sid": 403844282908375,
+							"parameters": {
+								"x": "sLaser.X",
+								"y": "sLaser.Y"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "pLaserParticles",
+							"sid": 102683261135050,
+							"parameters": {
+								"object": "sLaser",
+								"image-point-optional": "1"
+							}
+						}
+					],
+					"sid": 471570963640882,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 416671637314453,
+									"parameters": {
+										"first-value": "Functions.isLaserCollide(sLaser.UID)",
+										"comparison": 1,
+										"second-value": "0"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [],
+							"sid": 705067547670473,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "while",
+											"objectClass": "System",
+											"sid": 565157030116009
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 294492169543821,
+											"parameters": {
+												"first-value": "Functions.isLaserCollide(sLaser.UID)",
+												"comparison": 1,
+												"second-value": "0"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-width",
+											"objectClass": "sLaser",
+											"sid": 380489222881573,
+											"parameters": {
+												"width": "Self.Width + 10"
+											}
+										}
+									],
+									"sid": 778231753135950,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-width",
+													"objectClass": "sLaser",
+													"sid": 336131801117705,
+													"parameters": {
+														"comparison": 4,
+														"width": "9999"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "stop-loop",
+													"objectClass": "System",
+													"sid": 713446736768595
+												}
+											],
+											"sid": 842147017970643
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 554476595660285
+								}
+							],
+							"actions": [],
+							"sid": 542324587997158,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "while",
+											"objectClass": "System",
+											"sid": 347490549850622
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 230020414259977,
+											"parameters": {
+												"first-value": "Functions.isLaserCollide(sLaser.UID)",
+												"comparison": 1,
+												"second-value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-width",
+											"objectClass": "sLaser",
+											"sid": 219831984386048,
+											"parameters": {
+												"width": "Self.Width - 10"
+											}
+										}
+									],
+									"sid": 140086614671376
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 287636828807204
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "button",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "sStepButton",
+							"sid": 908502169124321,
+							"parameters": {
+								"object": "sPlayer"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "sStepButton",
+							"sid": 213055083354249,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "sStepButton",
+							"sid": 943039804170339,
+							"parameters": {
+								"instance-variable": "isDowned",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 583695145703959,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 132545210523666
+								}
+							],
+							"actions": [],
+							"sid": 979219401041478
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "sStepButton",
+							"sid": 190434062946913,
+							"parameters": {
+								"object": "sPlayer"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "sStepButton",
+							"sid": 335830076710854,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "sStepButton",
+							"sid": 711654638708210,
+							"parameters": {
+								"instance-variable": "isDowned",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 929483275357592,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 787722234021064
+								}
+							],
+							"actions": [],
+							"sid": 208297750062860
+						}
+					]
+				}
+			],
+			"sid": 206678185882158
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "cam",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "dy",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 476473304784131
+				},
+				{
+					"eventType": "variable",
+					"name": "scale",
+					"type": "number",
+					"initialValue": "1",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 656002315385750
+				},
+				{
+					"eventType": "variable",
+					"name": "dx",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 558178382258442
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 411378219731642
+						},
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "sPlayer",
+							"sid": 416297554723773,
+							"parameters": {
+								"unique-id": "PLAYING_UID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 567098886573319,
+							"parameters": {
+								"variable": "dx",
+								"value": "sPlayer.X - sCamera.X"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 668397991673909,
+							"parameters": {
+								"variable": "dy",
+								"value": "sPlayer.Y - 175/LayoutScale  - sCamera.Y"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 788177968786197,
+							"parameters": {
+								"variable": "scale",
+								"value": "min(1,5, max(1, - distance(0, dx, 0, dy) / 300 + 1,5))"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "sCamera",
+							"sid": 291892860533222,
+							"parameters": {
+								"x": "Self.X + dx * dt * 2",
+								"y": "Self.Y + dy * dt * 2"
+							}
+						},
+						{
+							"id": "set-layout-scale",
+							"objectClass": "System",
+							"sid": 147589686505925,
+							"parameters": {
+								"scale": "LayoutScale  - (LayoutScale - scale) * dt * 2"
+							}
+						}
+					],
+					"sid": 569807688102021
+				}
+			],
+			"sid": 503153878573303
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "doors",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 382794115701448,
+							"parameters": {
+								"object": "sSolidDoor"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 705026628301421,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "sStepButton",
+									"sid": 527364123144763,
+									"parameters": {
+										"unique-id": "sSolidDoor.btnUID"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 261111395137454,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "sStepButton",
+											"sid": 435357527525050,
+											"parameters": {
+												"instance-variable": "isDowned"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-opacity",
+											"objectClass": "sSolidDoor",
+											"sid": 701290175336076,
+											"parameters": {
+												"opacity": "50"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "sSolidDoor",
+											"sid": 679072862555153,
+											"behaviorType": "Solid",
+											"parameters": {
+												"state": "disabled"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "sSolidDoor",
+											"sid": 345854031881269,
+											"parameters": {
+												"instance-variable": "isSolid",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 960842157832608
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "sStepButton",
+											"sid": 228928226545981,
+											"parameters": {
+												"instance-variable": "isDowned"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-opacity",
+											"objectClass": "sSolidDoor",
+											"sid": 876775403407325,
+											"parameters": {
+												"opacity": "100"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "sSolidDoor",
+											"sid": 283360789697188,
+											"behaviorType": "Solid",
+											"parameters": {
+												"state": "enabled"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "sSolidDoor",
+											"sid": 472287958578565,
+											"parameters": {
+												"instance-variable": "isSolid",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 399069847294950
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 310993782497069
+		}
+	],
+	"sid": 319165814242184
+}

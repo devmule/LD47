@@ -1,0 +1,68 @@
+{
+	"name": "sStepButton",
+	"plugin-id": "Sprite",
+	"sid": 923587221145881,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "isDowned",
+			"type": "boolean",
+			"desc": "",
+			"sid": 637332765503294
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 203,
+						"height": 152,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5617469,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.3618421052631577,
+								1,
+								0.3618421052631579,
+								1,
+								1,
+								0,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 203,
+						"height": 97,
+						"originX": 0.5,
+						"originY": 0.21649484536082475,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4056893,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 763909573876675,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

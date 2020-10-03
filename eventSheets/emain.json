@@ -8,6 +8,14 @@
 		{
 			"eventType": "include",
 			"includeSheet": "eTimeState"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "eBinary"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "eGame"
 		}
 	],
 	"sid": 315213485216492

@@ -47,6 +47,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"version": "r218",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
@@ -69,6 +77,38 @@
 			"author": "Scirra",
 			"version": "r218",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"version": "r218",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"version": "r218",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "glowhorizontal",
+			"name": "Glow horizontal",
+			"author": "Scirra",
+			"version": "r218",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "glowvertical",
+			"name": "Glow vertical",
+			"author": "Scirra",
+			"version": "r218",
+			"bundled": false
 		}
 	],
 	"uniqueId": "lexi8nejz72",
@@ -80,7 +120,14 @@
 			"tTillNextTravel",
 			"jsonTrackings",
 			"Browser",
-			"Keyboard"
+			"Keyboard",
+			"sStepButton",
+			"sLaserGun",
+			"sLaser",
+			"pLaserParticles",
+			"pSpawnEffects",
+			"sCamera",
+			"sSolidDoor"
 		],
 		"subfolders": []
 	},
@@ -92,15 +139,26 @@
 				"sPlayer"
 			],
 			"selectMode": "normal"
+		},
+		{
+			"members": [
+				"pLaserParticles",
+				"sLaser",
+				"sLaserGun"
+			],
+			"selectMode": "all"
 		}
 	],
 	"families": {
-		"items": [],
+		"items": [
+			"laserSolid"
+		],
 		"subfolders": []
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"menu",
+			"lvl1"
 		],
 		"subfolders": []
 	},
@@ -109,7 +167,9 @@
 			"ePlayer",
 			"eTimeState",
 			"eMain",
-			"eBinary"
+			"eBinary",
+			"eMenu",
+			"eGame"
 		],
 		"subfolders": []
 	},
@@ -257,5 +317,5 @@
 	},
 	"viewportWidth": 1280,
 	"viewportHeight": 720,
-	"firstLayout": null
+	"firstLayout": "menu"
 }

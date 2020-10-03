@@ -9,7 +9,7 @@
 			"eventType": "variable",
 			"name": "TIME_PER_CYCLE_SEC",
 			"type": "number",
-			"initialValue": "5",
+			"initialValue": "10",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": true,
@@ -53,9 +53,44 @@
 				{
 					"callFunction": "timeBegin",
 					"sid": 242099557430125
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "sCamera",
+					"sid": 808372228082330,
+					"parameters": {
+						"visibility": "invisible"
+					}
 				}
 			],
-			"sid": 289524827197381
+			"sid": 289524827197381,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 910118638261590,
+							"parameters": {
+								"object": "sLaserGun"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "sLaserGun",
+							"sid": 384791467956371,
+							"parameters": {
+								"instance-variable": "state",
+								"value": "sLaserGun.AsJSON"
+							}
+						}
+					],
+					"sid": 393175807709152
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -74,6 +109,14 @@
 					"parameters": {
 						"variable": "cycle_time",
 						"value": "dt"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "tTillNextTravel",
+					"sid": 756785840047435,
+					"parameters": {
+						"text": "str(round(TIME_PER_CYCLE_SEC - cycle_time))&\":\"\n&str(\n    round((TIME_PER_CYCLE_SEC - cycle_time - floor(TIME_PER_CYCLE_SEC - cycle_time)) * 60)\n)"
 					}
 				}
 			],
@@ -125,6 +168,39 @@
 			],
 			"sid": 112138618588662,
 			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 729796245143823,
+							"parameters": {
+								"object": "sLaserGun"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-from-json",
+							"objectClass": "sLaserGun",
+							"sid": 347730082712392,
+							"parameters": {
+								"json": "Self.state"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "sLaserGun",
+							"sid": 250557930456778,
+							"parameters": {
+								"instance-variable": "state",
+								"value": "sLaserGun.AsJSON"
+							}
+						}
+					],
+					"sid": 173557844282661
+				},
 				{
 					"eventType": "block",
 					"conditions": [
@@ -243,6 +319,37 @@
 						}
 					],
 					"sid": 942224128443172
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-spraying",
+							"objectClass": "pSpawnEffects",
+							"sid": 209385498670539,
+							"parameters": {
+								"state": "spraying"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 604767890459209,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-spraying",
+							"objectClass": "pSpawnEffects",
+							"sid": 304609885643075,
+							"parameters": {
+								"state": "not-spraying"
+							}
+						}
+					],
+					"sid": 338157486534064
 				}
 			]
 		},
