@@ -156,6 +156,14 @@
 									"parameters": {
 										"control": "left"
 									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "sPlayerVis",
+									"sid": 210791114001832,
+									"parameters": {
+										"state": "mirrored"
+									}
 								}
 							],
 							"sid": 201814750917409
@@ -186,6 +194,14 @@
 									"behaviorType": "Platform",
 									"parameters": {
 										"control": "right"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "sPlayerVis",
+									"sid": 164930603595398,
+									"parameters": {
+										"state": "not-mirrored"
 									}
 								}
 							],

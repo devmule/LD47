@@ -11,24 +11,24 @@
 			{
 				"frames": [
 					{
-						"width": 180,
-						"height": 250,
+						"width": 415,
+						"height": 839,
 						"originX": 0.5,
 						"originY": 0.5,
-						"originalSource": "",
+						"originalSource": "C:\\Users\\79227\\Desktop\\спрайты\\Машина времени1.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 3946336,
+						"imageSpriteId": 174109,
 						"collisionPoly": {
 							"points": [
-								0.005555555555555556,
-								0.004,
+								0,
+								0,
 								1,
-								0.004,
+								0,
 								1,
-								1,
-								0.005555555555555556,
-								1
+								0.99880810488677,
+								0,
+								0.99880810488677
 							]
 						},
 						"useCollisionPoly": true,

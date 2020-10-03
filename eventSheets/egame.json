@@ -713,6 +713,171 @@
 				}
 			],
 			"sid": 310993782497069
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "player animation",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 292703491187696
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "sPlayerVis",
+							"sid": 433836128483393,
+							"parameters": {
+								"object": "sPlayer",
+								"image-point-optional": "0"
+							}
+						}
+					],
+					"sid": 622062553916992
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-jumping",
+							"objectClass": "sPlayer",
+							"sid": 234757932187508,
+							"behaviorType": "Platform"
+						},
+						{
+							"id": "is-falling",
+							"objectClass": "sPlayer",
+							"sid": 241460222603397,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "sPlayerVis",
+							"sid": 306807375203569,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "sPlayer",
+							"sid": 824235178879763,
+							"behaviorType": "Jumpthru",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 920597897117397,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 448847087506363
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "sPlayerVis",
+							"sid": 630985467084563,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "sPlayer",
+							"sid": 360215919583647,
+							"behaviorType": "Jumpthru",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 923299874280110
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "sPlayer",
+							"sid": 942036096528646,
+							"behaviorType": "Platform"
+						},
+						{
+							"id": "is-jumping",
+							"objectClass": "sPlayer",
+							"sid": 489742927507914,
+							"behaviorType": "Platform",
+							"isInverted": true
+						},
+						{
+							"id": "is-falling",
+							"objectClass": "sPlayer",
+							"sid": 954125451310683,
+							"behaviorType": "Platform",
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "sPlayerVis",
+							"sid": 118645006864403,
+							"parameters": {
+								"angle": "(sPlayer.Platform.Speed / sPlayer.Platform.MaxSpeed) * \nsin(time * 360 * 4) * (-10)"
+							}
+						}
+					],
+					"sid": 525483262249046
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-jumping",
+							"objectClass": "sPlayer",
+							"sid": 434713468767822,
+							"behaviorType": "Platform"
+						},
+						{
+							"id": "is-falling",
+							"objectClass": "sPlayer",
+							"sid": 137420278803446,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "sPlayerVis",
+							"sid": 800727851088902,
+							"parameters": {
+								"angle": "10 * \nsPlayer.Platform.VectorX / sPlayer.Platform.MaxSpeed * \n(1 - (sPlayer.Platform.VectorY / sPlayer.Platform.MaxFallSpeed))"
+							}
+						}
+					],
+					"sid": 503920173066443,
+					"isOrBlock": true
+				}
+			],
+			"sid": 472157726633269
 		}
 	],
 	"sid": 319165814242184

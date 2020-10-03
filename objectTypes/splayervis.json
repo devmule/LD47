@@ -1,0 +1,54 @@
+{
+	"name": "sPlayerVis",
+	"plugin-id": "Sprite",
+	"sid": 221569834987565,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "grayscale",
+			"name": "Grayscale"
+		}
+	],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 249,
+						"height": 230,
+						"originX": 0.4899598393574297,
+						"originY": 0.5282608695652172,
+						"originalSource": "C:\\Users\\79227\\Desktop\\спрайты\\Учёный2.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8891950,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 257,
+						"height": 279,
+						"originX": 0.490272373540856,
+						"originY": 0.6111111111111116,
+						"originalSource": "C:\\Users\\79227\\Desktop\\спрайты\\Учёный1.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1261884,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 432117618545814,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

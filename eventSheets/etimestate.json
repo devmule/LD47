@@ -9,7 +9,7 @@
 			"eventType": "variable",
 			"name": "TIME_PER_CYCLE_SEC",
 			"type": "number",
-			"initialValue": "10",
+			"initialValue": "20",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": true,
@@ -240,6 +240,16 @@
 								"x": "sTimeMachine.X",
 								"y": "sTimeMachine.Y"
 							}
+						},
+						{
+							"id": "set-effect-parameter",
+							"objectClass": "sPlayerVis",
+							"sid": 703910103764207,
+							"parameters": {
+								"effect": "\"Grayscale\"",
+								"parameter-index": "0",
+								"value": "50"
+							}
 						}
 					],
 					"sid": 367104049306826,
@@ -285,6 +295,14 @@
 								"object": "sPlayer",
 								"layer": "0",
 								"image-point": "0"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "sPlayer",
+							"sid": 816639931691340,
+							"parameters": {
+								"visibility": "invisible"
 							}
 						},
 						{

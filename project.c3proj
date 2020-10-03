@@ -109,6 +109,14 @@
 			"author": "Scirra",
 			"version": "r218",
 			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "grayscale",
+			"name": "Grayscale",
+			"author": "Scirra",
+			"version": "r218",
+			"bundled": false
 		}
 	],
 	"uniqueId": "lexi8nejz72",
@@ -127,7 +135,8 @@
 			"pLaserParticles",
 			"pSpawnEffects",
 			"sCamera",
-			"sSolidDoor"
+			"sSolidDoor",
+			"sPlayerVis"
 		],
 		"subfolders": []
 	},
@@ -136,9 +145,10 @@
 		{
 			"members": [
 				"jsonTrackings",
-				"sPlayer"
+				"sPlayer",
+				"sPlayerVis"
 			],
-			"selectMode": "normal"
+			"selectMode": "all"
 		},
 		{
 			"members": [
