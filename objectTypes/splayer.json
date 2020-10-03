@@ -9,6 +9,18 @@
 			"type": "number",
 			"desc": "",
 			"sid": 800409298609740
+		},
+		{
+			"name": "closingTime",
+			"type": "number",
+			"desc": "",
+			"sid": 545809159708083
+		},
+		{
+			"name": "isDead",
+			"type": "boolean",
+			"desc": "",
+			"sid": 720626384384604
 		}
 	],
 	"behaviorTypes": [

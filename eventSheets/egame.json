@@ -270,6 +270,31 @@
 							]
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "sPlayer",
+							"sid": 537808932992657,
+							"parameters": {
+								"object": "sLaser"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "sPlayer",
+							"sid": 389308760100040,
+							"parameters": {
+								"instance-variable": "isDead",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 740225159281941
 				}
 			],
 			"sid": 287636828807204
@@ -607,6 +632,82 @@
 									"sid": 399069847294950
 								}
 							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "sPlayer",
+							"sid": 335437432794041,
+							"parameters": {
+								"object": "sSolid"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "sPlayer",
+							"sid": 356762646992951,
+							"parameters": {
+								"instance-variable": "closingTime",
+								"value": "dt"
+							}
+						}
+					],
+					"sid": 500642414895484,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 866157420662582
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "sPlayer",
+									"sid": 325115324449340,
+									"parameters": {
+										"instance-variable": "closingTime",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 518853431632429
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "sPlayer",
+									"sid": 333934994667275,
+									"parameters": {
+										"instance-variable": "closingTime",
+										"comparison": 4,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "sPlayer",
+									"sid": 891868808385830,
+									"parameters": {
+										"instance-variable": "isDead",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 606693820739029
 						}
 					]
 				}
