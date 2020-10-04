@@ -564,6 +564,14 @@
 											"parameters": {
 												"instance-variable": "isDowned"
 											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "sSolidDoor",
+											"sid": 470070450791794,
+											"parameters": {
+												"instance-variable": "isInverted"
+											}
 										}
 									],
 									"actions": [
@@ -607,6 +615,14 @@
 												"instance-variable": "isDowned"
 											},
 											"isInverted": true
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "sSolidDoor",
+											"sid": 268224477661741,
+											"parameters": {
+												"instance-variable": "isInverted"
+											}
 										}
 									],
 									"actions": [
@@ -638,6 +654,109 @@
 										}
 									],
 									"sid": 399069847294950
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "sStepButton",
+											"sid": 749772765717952,
+											"parameters": {
+												"instance-variable": "isDowned"
+											}
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "sSolidDoor",
+											"sid": 421549304915995,
+											"parameters": {
+												"instance-variable": "isInverted"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-opacity",
+											"objectClass": "sSolidDoor",
+											"sid": 598281060730406,
+											"parameters": {
+												"opacity": "100"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "sSolidDoor",
+											"sid": 419066140732406,
+											"behaviorType": "Solid",
+											"parameters": {
+												"state": "enabled"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "sSolidDoor",
+											"sid": 325471500591461,
+											"parameters": {
+												"instance-variable": "isSolid",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 694953614258880
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "sStepButton",
+											"sid": 948794032479597,
+											"parameters": {
+												"instance-variable": "isDowned"
+											},
+											"isInverted": true
+										},
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "sSolidDoor",
+											"sid": 775671011156730,
+											"parameters": {
+												"instance-variable": "isInverted"
+											},
+											"isInverted": true
+										}
+									],
+									"actions": [
+										{
+											"id": "set-opacity",
+											"objectClass": "sSolidDoor",
+											"sid": 795252010173957,
+											"parameters": {
+												"opacity": "50"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "sSolidDoor",
+											"sid": 773915821870638,
+											"behaviorType": "Solid",
+											"parameters": {
+												"state": "disabled"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "sSolidDoor",
+											"sid": 880153543334508,
+											"parameters": {
+												"instance-variable": "isSolid",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 418794343653891
 								}
 							]
 						}
