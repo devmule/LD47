@@ -356,9 +356,9 @@
 								{
 									"id": "set-text",
 									"objectClass": "Text",
-									"sid": 786286833866723,
+									"sid": 317774700403524,
 									"parameters": {
-										"text": "\"I worked on myself for a long time.\""
+										"text": "\"I worked on this project for a long time.\""
 									}
 								}
 							],
