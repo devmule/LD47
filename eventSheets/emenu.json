@@ -43,7 +43,7 @@
 			"eventType": "variable",
 			"name": "CURRENT_LEVEL_NUM",
 			"type": "number",
-			"initialValue": "3",
+			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,

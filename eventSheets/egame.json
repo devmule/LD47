@@ -1404,10 +1404,22 @@
 									"id": "move-to-object",
 									"objectClass": "sPhantom",
 									"sid": 321157643149309,
+									"disabled": true,
 									"behaviorType": "MoveTo",
 									"parameters": {
 										"object": "sTimeMachine",
 										"image-point": "0",
+										"mode": "direct"
+									}
+								},
+								{
+									"id": "move-to-position",
+									"objectClass": "sPhantom",
+									"sid": 370831455867130,
+									"behaviorType": "MoveTo",
+									"parameters": {
+										"x": "sTimeMachine.X + 40 * (random(2) - 1)",
+										"y": "sTimeMachine.Y + 40 * (random(2) - 1)",
 										"mode": "direct"
 									}
 								}
@@ -1441,10 +1453,22 @@
 									"id": "move-to-object",
 									"objectClass": "sPhantom",
 									"sid": 947006994671574,
+									"disabled": true,
 									"behaviorType": "MoveTo",
 									"parameters": {
 										"object": "sPlayer",
 										"image-point": "0",
+										"mode": "direct"
+									}
+								},
+								{
+									"id": "move-to-position",
+									"objectClass": "sPhantom",
+									"sid": 892737570660457,
+									"behaviorType": "MoveTo",
+									"parameters": {
+										"x": "sPlayer.X + 40 * (random(2) - 1)",
+										"y": "sPlayer.Y + 40 * (random(2) - 1)",
 										"mode": "direct"
 									}
 								}
