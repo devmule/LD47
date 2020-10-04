@@ -339,6 +339,17 @@
 								"parameter-index": "0",
 								"value": "50"
 							}
+						},
+						{
+							"callFunction": "setStateAfterTme",
+							"sid": 853817424951733,
+							"parameters": [
+								"sPlayer.UID",
+								"0",
+								"000",
+								"sTimeMachine.X",
+								"sTimeMachine.Y"
+							]
 						}
 					],
 					"sid": 367104049306826,
@@ -392,6 +403,15 @@
 							"sid": 816639931691340,
 							"parameters": {
 								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "sPlayer",
+							"sid": 838020222681397,
+							"parameters": {
+								"object": "sTimeMachine",
+								"image-point-optional": "0"
 							}
 						},
 						{
@@ -670,19 +690,36 @@
 								"instance-variable": "eventState",
 								"value": "state"
 							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "sPlayer",
-							"sid": 121611214158747,
-							"disabled": true,
-							"parameters": {
-								"x": "x",
-								"y": "y"
-							}
 						}
 					],
-					"sid": 965727146449236
+					"sid": 965727146449236,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "sTimeMachine",
+									"sid": 702837094412603,
+									"parameters": {
+										"instance-variable": "isPosSync"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "sPlayer",
+									"sid": 351902720189460,
+									"parameters": {
+										"x": "x",
+										"y": "y"
+									}
+								}
+							],
+							"sid": 986347135700682
+						}
+					]
 				}
 			]
 		}

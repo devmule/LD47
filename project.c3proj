@@ -227,7 +227,7 @@
 				"pPhantomWhite",
 				"sPhantom"
 			],
-			"selectMode": "wrap"
+			"selectMode": "normal"
 		}
 	],
 	"families": {
@@ -241,7 +241,8 @@
 			"comics",
 			"menu",
 			"lvl1",
-			"lvl2"
+			"lvl2",
+			"lvl3"
 		],
 		"subfolders": []
 	},
