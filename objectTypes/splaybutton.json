@@ -1,0 +1,89 @@
+{
+	"name": "sPlayButton",
+	"plugin-id": "Sprite",
+	"sid": 458607449921627,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 323,
+						"height": 154,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\79227\\Desktop\\drive-download-20201003T162228Z-001\\плей2.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1757296,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								0.9969040247678018,
+								0,
+								0.9969040247678018,
+								0.5,
+								0.9969040247678018,
+								0.9935064935064936,
+								0.5,
+								0.9935064935064936,
+								0,
+								0.9935064935064936,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 323,
+						"height": 154,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\79227\\Desktop\\drive-download-20201003T162228Z-001\\плей1.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2686105,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								0.9969040247678018,
+								0,
+								0.9969040247678018,
+								0.5,
+								0.9969040247678018,
+								0.9935064935064936,
+								0.5,
+								0.9935064935064936,
+								0,
+								0.9935064935064936,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 636956159820270,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,7 +1,7 @@
 {
-	"name": "sShifretImage",
+	"name": "sDecoration",
 	"plugin-id": "Sprite",
-	"sid": 391275797214687,
+	"sid": 898523564322361,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -18,7 +18,7 @@
 						"originalSource": "C:\\Users\\79227\\Desktop\\drive-download-20201003T162228Z-001\\экран.png",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6978989,
+						"imageSpriteId": 268943,
 						"collisionPoly": {
 							"points": [
 								0,
@@ -41,9 +41,33 @@
 						},
 						"useCollisionPoly": true,
 						"duration": 1
+					},
+					{
+						"width": 900,
+						"height": 415,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9221645,
+						"collisionPoly": {
+							"points": [
+								0,
+								1,
+								0,
+								0,
+								0.6411111111111111,
+								0,
+								0.6411111111111111,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
 					}
 				],
-				"sid": 681396519210709,
+				"sid": 278487506737895,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

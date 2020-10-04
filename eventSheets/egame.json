@@ -938,6 +938,15 @@
 							"parameters": {
 								"frame-number": "1"
 							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "sPlayer",
+							"sid": 355534845103636,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "disabled"
+							}
 						}
 					],
 					"sid": 281974655493679

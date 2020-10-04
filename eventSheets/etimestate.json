@@ -150,9 +150,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "tTillNextTravel",
-					"sid": 756785840047435,
+					"sid": 566152117759387,
 					"parameters": {
-						"text": "str(round(TIME_PER_CYCLE_SEC - cycle_time))&\":\"\n&str(\n    round((TIME_PER_CYCLE_SEC - cycle_time - floor(TIME_PER_CYCLE_SEC - cycle_time)) * 60)\n)"
+						"text": "str(floor(TIME_PER_CYCLE_SEC - cycle_time))&\":\"\n&str(\n    floor((TIME_PER_CYCLE_SEC - cycle_time - floor(TIME_PER_CYCLE_SEC - cycle_time)) * 10)\n)"
 					}
 				}
 			],

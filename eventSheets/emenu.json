@@ -65,16 +65,7 @@
 							"sid": 936607264113509
 						}
 					],
-					"actions": [
-						{
-							"id": "set-text",
-							"objectClass": "Text",
-							"sid": 612054612816776,
-							"parameters": {
-								"text": "CHANGING_LEVEL_NAME"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 547812542610880,
 					"children": [
 						{
@@ -136,6 +127,33 @@
 											"sid": 423997257213323,
 											"parameters": {
 												"layout": "CHANGING_LEVEL_NAME"
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 836806620145330,
+											"parameters": {
+												"variable": "IS_TIME",
+												"value": "true"
+											}
+										},
+										{
+											"id": "set-boolean-eventvar",
+											"objectClass": "System",
+											"sid": 386162005725574,
+											"parameters": {
+												"variable": "IS_WIN",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 878657686678783,
+											"parameters": {
+												"variable": "cycle_time",
+												"value": "0"
 											}
 										}
 									],
@@ -280,33 +298,6 @@
 			"conditions": [],
 			"actions": [
 				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 673434079209212,
-					"parameters": {
-						"variable": "IS_TIME",
-						"value": "true"
-					}
-				},
-				{
-					"id": "set-boolean-eventvar",
-					"objectClass": "System",
-					"sid": 122948269272850,
-					"parameters": {
-						"variable": "IS_WIN",
-						"value": "false"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 719217547636479,
-					"parameters": {
-						"variable": "cycle_time",
-						"value": "0"
-					}
-				},
-				{
 					"callFunction": "goToLevel",
 					"sid": 318380970926822,
 					"parameters": [
@@ -324,7 +315,7 @@
 					"objectClass": "Touch",
 					"sid": 592026307158631,
 					"parameters": {
-						"object": "Sprite"
+						"object": "sPlayButton"
 					}
 				}
 			],
@@ -347,6 +338,55 @@
 				}
 			],
 			"sid": 594116797146041
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 169048031326773,
+					"parameters": {
+						"object": "sPlayButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "sPlayButton",
+					"sid": 251712296132499,
+					"parameters": {
+						"frame-number": "1"
+					}
+				}
+			],
+			"sid": 794627140801564
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 303234791174728,
+					"parameters": {
+						"object": "sPlayButton"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "sPlayButton",
+					"sid": 923992842170994,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 518898574360136
 		}
 	],
 	"sid": 454245107823311

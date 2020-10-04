@@ -16795,23 +16795,52 @@
 			"overriden": 0,
 			"instances": [
 				{
+					"type": "sDecoration",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 1,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 527,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 6.04674595793108,
+						"y": 6.6039188814653755,
+						"width": 250.14528306715493,
+						"height": 115.34476941429922,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "tTillNextTravel",
 					"properties": {
-						"text": "00:00",
+						"text": "00:0",
 						"enable-bbcode": true,
 						"font": "Impact",
-						"size": 55,
+						"size": 50,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
 						"color": [
-							0,
-							0,
-							0,
+							1,
+							1,
+							1,
 							1
 						],
 						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": true,
 						"origin": "top-left"
@@ -16820,10 +16849,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 93,
-						"y": 74,
-						"width": 389,
-						"height": 198,
+						"x": 75.3638277513134,
+						"y": -3.331419818060027,
+						"width": 228,
+						"height": 126,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -16878,10 +16907,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": -8,
+						"x": 0,
 						"y": 775,
-						"width": 1293,
-						"height": 731,
+						"width": 1280,
+						"height": 720,
 						"originX": 0,
 						"originY": 0,
 						"color": [
