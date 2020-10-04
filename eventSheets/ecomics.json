@@ -1,0 +1,774 @@
+{
+	"name": "eComics",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "eBinary"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 624180197513071
+				}
+			],
+			"actions": [],
+			"sid": 585419607361051,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "t",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 890204429889984
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 681344448694654,
+							"parameters": {
+								"first-value": "time",
+								"comparison": 2,
+								"second-value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 598265073537635,
+							"parameters": {
+								"variable": "t",
+								"value": "time"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "sComicsSlide",
+							"sid": 200536836287806,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "sComicsSlide",
+							"sid": 648560710080003,
+							"parameters": {
+								"opacity": "Functions.easeTrigonoQuad(t) * 100"
+							}
+						}
+					],
+					"sid": 573715117337936
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 222936829488876,
+							"parameters": {
+								"first-value": "time",
+								"comparison": 4,
+								"second-value": "1"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 938586505568654,
+							"parameters": {
+								"first-value": "time",
+								"comparison": 2,
+								"second-value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 857929562875604,
+							"parameters": {
+								"variable": "t",
+								"value": "time - 1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "sComicsSlide",
+							"sid": 912379377540013,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "sComicsSlide",
+							"sid": 991116705095836,
+							"parameters": {
+								"opacity": "Functions.easeTrigonoQuad(t) * 100"
+							}
+						}
+					],
+					"sid": 203880417156740
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 890318131246469,
+							"parameters": {
+								"first-value": "time",
+								"comparison": 4,
+								"second-value": "2"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 672004568033321,
+							"parameters": {
+								"first-value": "time",
+								"comparison": 2,
+								"second-value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 631079930224543,
+							"parameters": {
+								"variable": "t",
+								"value": "time - 2"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "sComicsSlide",
+							"sid": 336755592125798,
+							"parameters": {
+								"frame-number": "2"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "sComicsSlide",
+							"sid": 522751120847691,
+							"parameters": {
+								"opacity": "Functions.easeTrigonoQuad(t) * 100"
+							}
+						}
+					],
+					"sid": 718945986862115
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 293606238060353,
+							"parameters": {
+								"first-value": "time",
+								"comparison": 4,
+								"second-value": "3"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 924175196139308,
+							"parameters": {
+								"first-value": "time",
+								"comparison": 2,
+								"second-value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 959486936953457,
+							"parameters": {
+								"variable": "t",
+								"value": "time - 3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "sComicsSlide",
+							"sid": 345037713927079,
+							"parameters": {
+								"frame-number": "3"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "sComicsSlide",
+							"sid": 209720955621211,
+							"parameters": {
+								"opacity": "Functions.easeTrigonoQuad(t) * 100"
+							}
+						}
+					],
+					"sid": 365139885173575
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 717544814686904,
+							"parameters": {
+								"first-value": "time",
+								"comparison": 4,
+								"second-value": "4"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 790808556624007,
+							"parameters": {
+								"first-value": "time",
+								"comparison": 2,
+								"second-value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 649277215018873,
+							"parameters": {
+								"variable": "t",
+								"value": "time - 4"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "sComicsSlide",
+							"sid": 568218212776260,
+							"parameters": {
+								"frame-number": "4"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "sComicsSlide",
+							"sid": 944307900476288,
+							"parameters": {
+								"opacity": "Functions.easeTrigonoQuad(t) * 100"
+							}
+						}
+					],
+					"sid": 844326843916010
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 624296006120464,
+							"parameters": {
+								"first-value": "time",
+								"comparison": 4,
+								"second-value": "5"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 178960343366496,
+							"parameters": {
+								"first-value": "time",
+								"comparison": 2,
+								"second-value": "9"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 904417073279690,
+							"parameters": {
+								"variable": "t",
+								"value": "(time - 5) / 4"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "sComicsSlide",
+							"sid": 965858244561633,
+							"parameters": {
+								"frame-number": "5"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "sComicsSlide",
+							"sid": 914803033146376,
+							"parameters": {
+								"opacity": "(1 - (1 -  Functions.easeTrigonoQuad(t) * Functions.easeTrigonoQuad(t) * Functions.easeTrigonoQuad(t)) )* 100"
+							}
+						}
+					],
+					"sid": 184597577914267,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 331877732321439
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Text",
+									"sid": 786286833866723,
+									"parameters": {
+										"text": "\"I worked on myself for a long time.\""
+									}
+								}
+							],
+							"sid": 616465507844361
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 131252970810008,
+							"parameters": {
+								"first-value": "time",
+								"comparison": 4,
+								"second-value": "9"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 969582246377298,
+							"parameters": {
+								"first-value": "time",
+								"comparison": 2,
+								"second-value": "13"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 187579345173993,
+							"parameters": {
+								"variable": "t",
+								"value": "(time - 9) / 4"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "sComicsSlide",
+							"sid": 308259424414239,
+							"parameters": {
+								"frame-number": "6"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "sComicsSlide",
+							"sid": 806567458498797,
+							"parameters": {
+								"opacity": "(1 - (1 - Functions.easeTrigonoQuad(t) * Functions.easeTrigonoQuad(t)) )* 100"
+							}
+						}
+					],
+					"sid": 861725200072858
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 572653487055054,
+							"parameters": {
+								"first-value": "time",
+								"comparison": 4,
+								"second-value": "9"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 893831221801073,
+							"parameters": {
+								"first-value": "time",
+								"comparison": 2,
+								"second-value": "11"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 390922397287923
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text",
+							"sid": 878799400834320,
+							"parameters": {
+								"text": "\"And now I am ready to present to humanity something great ...\""
+							}
+						}
+					],
+					"sid": 966730540414907
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 824070294914115,
+							"parameters": {
+								"first-value": "time",
+								"comparison": 4,
+								"second-value": "12"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 253468061565701,
+							"parameters": {
+								"first-value": "time",
+								"comparison": 2,
+								"second-value": "14"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 149873649833289
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text",
+							"sid": 896461843130384,
+							"parameters": {
+								"text": "\"And now I am ready to present to humanity something great ...\" & newline &\n\"... the ability to travel through time.\""
+							}
+						}
+					],
+					"sid": 449647911066233
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 795462584222424,
+							"parameters": {
+								"first-value": "time",
+								"comparison": 4,
+								"second-value": "13"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 909930939655835,
+							"parameters": {
+								"first-value": "time",
+								"comparison": 2,
+								"second-value": "17"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 965166319271189,
+							"parameters": {
+								"variable": "t",
+								"value": "(time - 13) / 4"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "sComicsSlide",
+							"sid": 441494082137895,
+							"parameters": {
+								"frame-number": "7"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "sComicsSlide",
+							"sid": 577116894109642,
+							"parameters": {
+								"opacity": "(1 - (1 - Functions.easeTrigonoQuad(t) * Functions.easeTrigonoQuad(t)) )* 100"
+							}
+						}
+					],
+					"sid": 113933924085362
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 940077015424990,
+							"parameters": {
+								"first-value": "time",
+								"comparison": 4,
+								"second-value": "14"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 261736763489049,
+							"parameters": {
+								"first-value": "time",
+								"comparison": 2,
+								"second-value": "15.5"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 154906853663658
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text",
+							"sid": 110551220552996,
+							"parameters": {
+								"text": "\"Oh no, Fuzzy! It's a repeat button!\""
+							}
+						}
+					],
+					"sid": 795482941231480
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 160574778142193,
+							"parameters": {
+								"first-value": "time",
+								"comparison": 4,
+								"second-value": "15.5"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 428919729933153,
+							"parameters": {
+								"first-value": "time",
+								"comparison": 2,
+								"second-value": "17"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 282546021361202
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text",
+							"sid": 875176483801121,
+							"parameters": {
+								"text": "\"Oh no, Fuzzy! It's a repeat button!\" & newline &\n\"What did you done!\""
+							}
+						}
+					],
+					"sid": 987774040539860
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 439873766801803,
+							"parameters": {
+								"first-value": "time",
+								"comparison": 4,
+								"second-value": "17"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 230480905712528,
+							"parameters": {
+								"first-value": "time",
+								"comparison": 2,
+								"second-value": "20"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 373011569269884,
+							"parameters": {
+								"variable": "t",
+								"value": "(time - 17) / 3"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "sComicsSlide",
+							"sid": 230768920095775,
+							"parameters": {
+								"frame-number": "8"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "sComicsSlide",
+							"sid": 238386760499769,
+							"parameters": {
+								"opacity": "(1 - (1 - Functions.easeTrigonoQuad(t) * Functions.easeTrigonoQuad(t)) )* 100"
+							}
+						}
+					],
+					"sid": 267746690864985,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 994825289137578
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Text",
+									"sid": 875606791815952,
+									"parameters": {
+										"text": "\"I have to fix this before the world is destroyed.\""
+									}
+								}
+							],
+							"sid": 771315433209165
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 812911312583603,
+							"parameters": {
+								"first-value": "time",
+								"comparison": 4,
+								"second-value": "20"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 925527923793939
+						}
+					],
+					"actions": [
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 578642169933279,
+							"parameters": {
+								"tag": "\"comic\""
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 858113763515386,
+							"parameters": {
+								"layout": "menu"
+							}
+						}
+					],
+					"sid": 689919331975031
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 242350735245097
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 939867095517402,
+					"parameters": {
+						"audio-file": "comicSound",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"comic\""
+					}
+				}
+			],
+			"sid": 877178253778472
+		}
+	],
+	"sid": 856423356300026
+}

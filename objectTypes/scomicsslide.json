@@ -1,0 +1,313 @@
+{
+	"name": "sComicsSlide",
+	"plugin-id": "Sprite",
+	"sid": 911146184981278,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 256,
+						"height": 256,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\79227\\Desktop\\иконка3.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3975497,
+						"collisionPoly": {
+							"points": [
+								0.1005859375,
+								0.1005859375,
+								0.5,
+								0.1220703125,
+								0.8544921875,
+								0.14453125,
+								0.93359375,
+								0.5,
+								0.7978515625,
+								0.7978515625,
+								0.5,
+								0.849609375,
+								0.0966796875,
+								0.90234375,
+								0.11328125,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 754,
+						"height": 98,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\79227\\Desktop\\logotype_yellow-white.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 967177,
+						"collisionPoly": {
+							"points": [
+								0.004181798173214482,
+								0.032121724429416736,
+								0.5,
+								0.4125105663567202,
+								0.9461868603499505,
+								0.4125105663567202,
+								0.9855838010344448,
+								0.5,
+								0.9754594475624518,
+								0.8114961961115807,
+								0.5,
+								0.978021978021978,
+								0.008913832948167713,
+								0.9306846999154691,
+								0.004181798173214482,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 256,
+						"height": 256,
+						"originX": 0.46657754010695185,
+						"originY": 0.5320855614973262,
+						"originalSource": "C:\\Users\\79227\\Desktop\\521-5213970_3d-text-maker-interforma-hd-png-download.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5819001,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.4572192513368984,
+								0,
+								0.8649732620320856,
+								0,
+								0.8649732620320856,
+								0.5521390374331551,
+								0.8649732620320856,
+								1,
+								0.4572192513368984,
+								1,
+								0,
+								1,
+								0,
+								0.5521390374331551
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 256,
+						"height": 256,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\79227\\Desktop\\w995qjX2nZc.jpg",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7941129,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								0.999,
+								0,
+								0.999,
+								0.5,
+								0.999,
+								0.999,
+								0.5,
+								0.999,
+								0,
+								0.999,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 500,
+						"height": 280,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\79227\\Desktop\\521-5213970_3d-text-maker-interforma-hd-png-download.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2361434,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								0.998,
+								0,
+								0.998,
+								0.5,
+								0.998,
+								0.9964285714285714,
+								0.5,
+								0.9964285714285714,
+								0,
+								0.9964285714285714,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 1280,
+						"height": 720,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\79227\\Desktop\\слайды\\2.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4806518,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								0.99921875,
+								0,
+								0.99921875,
+								0.5,
+								0.99921875,
+								0.9986111111111111,
+								0.5,
+								0.9986111111111111,
+								0,
+								0.9986111111111111,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 1280,
+						"height": 720,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\79227\\Desktop\\слайды\\2.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 53046,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								0.99921875,
+								0,
+								0.99921875,
+								0.5,
+								0.99921875,
+								0.9986111111111111,
+								0.5,
+								0.9986111111111111,
+								0,
+								0.9986111111111111,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 1280,
+						"height": 720,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\79227\\Desktop\\слайды\\4.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4893051,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								0.99921875,
+								0,
+								0.99921875,
+								0.5,
+								0.99921875,
+								0.9986111111111111,
+								0.5,
+								0.9986111111111111,
+								0,
+								0.9986111111111111,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 1280,
+						"height": 720,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\79227\\Desktop\\слайды\\5.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5752468,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								0.99921875,
+								0,
+								0.99921875,
+								0.5,
+								0.99921875,
+								0.9986111111111111,
+								0.5,
+								0.9986111111111111,
+								0,
+								0.9986111111111111,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 168228388666466,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

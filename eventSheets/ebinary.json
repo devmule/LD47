@@ -165,6 +165,39 @@
 				}
 			],
 			"sid": 483409654070654
+		},
+		{
+			"functionName": "easeTrigonoQuad",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "number",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "t",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 889549327849997
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"type": "script",
+					"script": "let t = localVars.t;\nlocalVars.t = 1 - Math.pow(1 - Math.sin(Math.PI*t), 2);"
+				},
+				{
+					"id": "set-function-return-value",
+					"objectClass": "Functions",
+					"sid": 202808338663654,
+					"parameters": {
+						"value": "t"
+					}
+				}
+			],
+			"sid": 179259590756780
 		}
 	],
 	"sid": 295486252516740

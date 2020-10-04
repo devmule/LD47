@@ -177,7 +177,9 @@
 			"sPlayButton",
 			"Touch",
 			"sDecoration",
-			"Audio"
+			"Audio",
+			"sComicsSlide",
+			"Text"
 		],
 		"subfolders": []
 	},
@@ -209,6 +211,7 @@
 	},
 	"layouts": {
 		"items": [
+			"comics",
 			"menu",
 			"lvl1",
 			"lvl2"
@@ -222,7 +225,8 @@
 			"eMain",
 			"eBinary",
 			"eGame",
-			"eMenu"
+			"eMenu",
+			"eComics"
 		],
 		"subfolders": []
 	},
@@ -272,6 +276,11 @@
 					"name": "sound1.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 450650744119362
+				},
+				{
+					"name": "comicSound.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 948988660665805
 				}
 			],
 			"subfolders": []
@@ -409,5 +418,5 @@
 	},
 	"viewportWidth": 1280,
 	"viewportHeight": 720,
-	"firstLayout": "menu"
+	"firstLayout": "comics"
 }
