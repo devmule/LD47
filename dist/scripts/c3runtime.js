@@ -3142,6 +3142,7 @@ inst.GetBehaviorInstanceFromCtor(C3.Behaviors.scrollto);if(!behInst||!behInst.Ge
 		C3.Plugins.System.Exps.int,
 		C3.ScriptsInEvents.Ebinary_Event4_Act2,
 		C3.ScriptsInEvents.Ebinary_Event5_Act1,
+		C3.ScriptsInEvents.Ebinary_Event6_Act1,
 		C3.Plugins.Sprite.Cnds.IsOverlapping,
 		C3.Plugins.System.Cnds.Else,
 		C3.Plugins.Sprite.Acts.SetAngle,
@@ -3183,7 +3184,9 @@ inst.GetBehaviorInstanceFromCtor(C3.Behaviors.scrollto);if(!behInst||!behInst.Ge
 		C3.Plugins.System.Acts.GoToLayoutByName,
 		C3.Plugins.Touch.Cnds.OnTapGestureObject,
 		C3.Plugins.Touch.Cnds.IsTouchingObject,
-		C3.Plugins.Audio.Cnds.IsTagPlaying
+		C3.Plugins.Audio.Cnds.IsTagPlaying,
+		C3.Plugins.Audio.Acts.Stop,
+		C3.Plugins.System.Acts.GoToLayout
 		];
 	};
 	self.C3_JsPropNameTable = [
@@ -3224,6 +3227,8 @@ inst.GetBehaviorInstanceFromCtor(C3.Behaviors.scrollto);if(!behInst||!behInst.Ge
 		{Touch: 0},
 		{sDecoration: 0},
 		{Audio: 0},
+		{sComicsSlide: 0},
+		{Text: 0},
 		{laserSolid: 0},
 		{key: 0},
 		{TIME_PER_CYCLE_SEC: 0},
@@ -3576,7 +3581,88 @@ inst.GetBehaviorInstanceFromCtor(C3.Behaviors.scrollto);if(!behInst||!behInst.Ge
 			return () => and("lvl", v0.GetValue());
 		},
 		() => "sound",
-		() => -10
+		() => -10,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const v1 = p._GetNode(1).GetVar();
+			return () => (f0(v1.GetValue()) * 100);
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => (f0() - 1);
+		},
+		() => 3,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => (f0() - 2);
+		},
+		() => 4,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => (f0() - 3);
+		},
+		() => 5,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => (f0() - 4);
+		},
+		() => 9,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => ((f0() - 5) / 4);
+		},
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const v1 = p._GetNode(1).GetVar();
+			const f2 = p._GetNode(2).GetBoundMethod();
+			const v3 = p._GetNode(3).GetVar();
+			const f4 = p._GetNode(4).GetBoundMethod();
+			const v5 = p._GetNode(5).GetVar();
+			return () => ((1 - (1 - ((f0(v1.GetValue()) * f2(v3.GetValue())) * f4(v5.GetValue())))) * 100);
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => ((360 + ((141 * 2) * v0.GetValue())) - 141);
+		},
+		() => "I worked on myself for a long time.",
+		() => 13,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => ((f0() - 9) / 4);
+		},
+		() => 6,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const v1 = p._GetNode(1).GetVar();
+			const f2 = p._GetNode(2).GetBoundMethod();
+			const v3 = p._GetNode(3).GetVar();
+			return () => ((1 - (1 - (f0(v1.GetValue()) * f2(v3.GetValue())))) * 100);
+		},
+		p => {
+			const v0 = p._GetNode(0).GetVar();
+			return () => ((360 - ((141 * 2) * v0.GetValue())) + 141);
+		},
+		() => 11,
+		() => "And now I am ready to present to humanity something great ...",
+		() => 12,
+		() => 14,
+		() => "And now I am ready to present to humanity something great ...\n... the ability to travel through time.",
+		() => 17,
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => ((f0() - 13) / 4);
+		},
+		() => 7,
+		() => 15.5,
+		() => "Oh no, Fuzzy! It's a repeat button!",
+		() => "Oh no, Fuzzy! It's a repeat button!\nWhat did you done!",
+		p => {
+			const f0 = p._GetNode(0).GetBoundMethod();
+			return () => ((f0() - 17) / 3);
+		},
+		() => 8,
+		() => "I have to fix this before the world is destroyed.",
+		() => "comic"
 	];
 }
 
@@ -3604,6 +3690,12 @@ inst.GetBehaviorInstanceFromCtor(C3.Behaviors.scrollto);if(!behInst||!behInst.Ge
 		{
 			let t = localVars.t;
 			localVars.t = t < .5 ? Math.sin(Math.PI*t*t*2)/2 : 1 - Math.sin(Math.PI * (1-t)) / 2;
+		},
+
+		async Ebinary_Event6_Act1(runtime, localVars)
+		{
+			let t = localVars.t;
+			localVars.t = 1 - Math.pow(1 - Math.sin(Math.PI*t), 2);
 		}
 
 	};

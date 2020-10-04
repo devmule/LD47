@@ -331,6 +331,14 @@
 							"parameters": {
 								"opacity": "(1 - (1 -  Functions.easeTrigonoQuad(t) * Functions.easeTrigonoQuad(t) * Functions.easeTrigonoQuad(t)) )* 100"
 							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "sComicsSlide",
+							"sid": 294516580314681,
+							"parameters": {
+								"y": "360 + 141 * 2 * t - 141"
+							}
 						}
 					],
 					"sid": 184597577914267,
@@ -406,6 +414,14 @@
 							"sid": 806567458498797,
 							"parameters": {
 								"opacity": "(1 - (1 - Functions.easeTrigonoQuad(t) * Functions.easeTrigonoQuad(t)) )* 100"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "sComicsSlide",
+							"sid": 380028394424736,
+							"parameters": {
+								"y": "360 - 141 * 2 * t + 141"
 							}
 						}
 					],
@@ -542,6 +558,14 @@
 							"parameters": {
 								"opacity": "(1 - (1 - Functions.easeTrigonoQuad(t) * Functions.easeTrigonoQuad(t)) )* 100"
 							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "sComicsSlide",
+							"sid": 706667089096333,
+							"parameters": {
+								"y": "360 + 141 * 2 * t - 141"
+							}
 						}
 					],
 					"sid": 113933924085362
@@ -677,6 +701,14 @@
 							"parameters": {
 								"opacity": "(1 - (1 - Functions.easeTrigonoQuad(t) * Functions.easeTrigonoQuad(t)) )* 100"
 							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "sComicsSlide",
+							"sid": 550468498026928,
+							"parameters": {
+								"y": "360 - 141 * 2 * t + 141"
+							}
 						}
 					],
 					"sid": 267746690864985,
@@ -733,9 +765,17 @@
 							}
 						},
 						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 124062605801629,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
 							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 858113763515386,
+							"sid": 584135956222654,
 							"parameters": {
 								"layout": "menu"
 							}
