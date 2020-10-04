@@ -63,6 +63,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r218",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
@@ -168,7 +176,8 @@
 			"sBackGround",
 			"sPlayButton",
 			"Touch",
-			"sDecoration"
+			"sDecoration",
+			"Audio"
 		],
 		"subfolders": []
 	},
@@ -223,11 +232,48 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "laser.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 191103336365779
+				},
+				{
+					"name": "endButton.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 719994355269088
+				},
+				{
+					"name": "pain.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 357820058056096
+				},
+				{
+					"name": "step1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 538778579880327
+				},
+				{
+					"name": "step2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 455004949728104
+				},
+				{
+					"name": "step3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 318755974222326
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "sound1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 450650744119362
+				}
+			],
 			"subfolders": []
 		},
 		"video": {

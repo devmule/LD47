@@ -387,6 +387,39 @@
 				}
 			],
 			"sid": 518898574360136
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 334036114162838
+				},
+				{
+					"id": "is-tag-playing",
+					"objectClass": "Audio",
+					"sid": 700036105262160,
+					"parameters": {
+						"tag": "\"sound\""
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 330926376961763,
+					"parameters": {
+						"audio-file": "sound1",
+						"loop": "looping",
+						"volume": "-10",
+						"tag-optional": "\"sound\""
+					}
+				}
+			],
+			"sid": 340818216652978
 		}
 	],
 	"sid": 454245107823311

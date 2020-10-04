@@ -877,7 +877,48 @@
 									}
 								}
 							],
-							"sid": 416254616330989
+							"sid": 416254616330989,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 892612170899270,
+											"parameters": {
+												"first-value": "abs(sin(time * 360 * 4))",
+												"comparison": 4,
+												"second-value": "0.8"
+											}
+										},
+										{
+											"id": "trigger-once-while-true",
+											"objectClass": "System",
+											"sid": 143325079101421
+										}
+									],
+									"actions": [
+										{
+											"id": "play-at-object-by-name",
+											"objectClass": "Audio",
+											"sid": 455041421352008,
+											"parameters": {
+												"folder": "sounds",
+												"audio-file-name": "\"step\"&floor(1 + random(3))",
+												"loop": "not-looping",
+												"volume": "-10 - 10* abs( sPlayerVis.Angle / 10)",
+												"object": "sPlayerVis",
+												"inner-angle": "360",
+												"outer-angle": "0",
+												"outer-gain": "0",
+												"tag-optional": "\"\""
+											}
+										}
+									],
+									"sid": 840562280369873
+								}
+							]
 						},
 						{
 							"eventType": "block",
@@ -950,6 +991,36 @@
 						}
 					],
 					"sid": 281974655493679
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-landed",
+							"objectClass": "sPlayer",
+							"sid": 573712987969709,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "play-at-object-by-name",
+							"objectClass": "Audio",
+							"sid": 304666652343484,
+							"parameters": {
+								"folder": "sounds",
+								"audio-file-name": "\"step\"&floor(1 + random(3))",
+								"loop": "not-looping",
+								"volume": "0",
+								"object": "sPlayerVis",
+								"inner-angle": "360",
+								"outer-angle": "0",
+								"outer-gain": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 862989630047239
 				}
 			],
 			"sid": 472157726633269
@@ -1037,6 +1108,17 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 527633222642724,
+							"parameters": {
+								"audio-file": "endButton",
+								"loop": "not-looping",
+								"volume": "50",
+								"tag-optional": "\"\""
+							}
+						},
 						{
 							"id": "set-animation-frame",
 							"objectClass": "sWinButton",
