@@ -272,6 +272,7 @@
 							"id": "set-enabled",
 							"objectClass": "sPlayer",
 							"sid": 901027897300529,
+							"disabled": true,
 							"behaviorType": "Jumpthru",
 							"parameters": {
 								"state": "enabled"
@@ -354,6 +355,7 @@
 							"id": "set-enabled",
 							"objectClass": "sPlayer",
 							"sid": 987060460283968,
+							"disabled": true,
 							"behaviorType": "Jumpthru",
 							"parameters": {
 								"state": "disabled"
@@ -630,6 +632,7 @@
 							"id": "set-position",
 							"objectClass": "sPlayer",
 							"sid": 121611214158747,
+							"disabled": true,
 							"parameters": {
 								"x": "x",
 								"y": "y"
