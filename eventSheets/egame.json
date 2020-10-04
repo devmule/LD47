@@ -817,15 +817,6 @@
 									"parameters": {
 										"frame-number": "1"
 									}
-								},
-								{
-									"id": "set-enabled",
-									"objectClass": "sPlayer",
-									"sid": 576663823036366,
-									"behaviorType": "Jumpthru",
-									"parameters": {
-										"state": "disabled"
-									}
 								}
 							],
 							"sid": 800166484502299,
@@ -847,15 +838,6 @@
 									"sid": 908188705619568,
 									"parameters": {
 										"frame-number": "0"
-									}
-								},
-								{
-									"id": "set-enabled",
-									"objectClass": "sPlayer",
-									"sid": 829409881092798,
-									"behaviorType": "Jumpthru",
-									"parameters": {
-										"state": "enabled"
 									}
 								}
 							],
@@ -1071,6 +1053,30 @@
 								"variable": "IS_WIN",
 								"value": "true"
 							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 623792968747068,
+							"parameters": {
+								"seconds": "2"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 107195892709983,
+							"parameters": {
+								"variable": "CURRENT_LEVEL_NUM",
+								"value": "1"
+							}
+						},
+						{
+							"callFunction": "goToLevelByNum",
+							"sid": 992346677805584,
+							"parameters": [
+								"CURRENT_LEVEL_NUM"
+							]
 						}
 					],
 					"sid": 423967986984646

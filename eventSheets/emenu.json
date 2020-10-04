@@ -6,6 +6,10 @@
 			"includeSheet": "eBinary"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "eTimeState"
+		},
+		{
 			"eventType": "variable",
 			"name": "IS_CHANGING_LEVEL",
 			"type": "boolean",
@@ -36,78 +40,22 @@
 			"sid": 620263502134582
 		},
 		{
+			"eventType": "variable",
+			"name": "CURRENT_LEVEL_NUM",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 362666908357140
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "levels changing",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
-				{
-					"functionName": "goToLevel",
-					"functionDescription": "",
-					"functionCategory": "",
-					"functionReturnType": "none",
-					"functionIsAsync": false,
-					"functionParameters": [
-						{
-							"name": "levelName",
-							"type": "string",
-							"initialValue": "lvl1",
-							"comment": "",
-							"sid": 790841693772743
-						}
-					],
-					"eventType": "function-block",
-					"conditions": [],
-					"actions": [],
-					"sid": 635297902280624,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 553006599220403,
-									"parameters": {
-										"variable": "IS_CHANGING_LEVEL"
-									},
-									"isInverted": true
-								}
-							],
-							"actions": [
-								{
-									"id": "set-boolean-eventvar",
-									"objectClass": "System",
-									"sid": 933932724098826,
-									"parameters": {
-										"variable": "IS_CHANGING_LEVEL",
-										"value": "true"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 247268543468721,
-									"parameters": {
-										"variable": "CHANGING_LEVEL_T",
-										"value": "0"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 710605628079597,
-									"parameters": {
-										"variable": "CHANGING_LEVEL_NAME",
-										"value": "levelName"
-									}
-								}
-							],
-							"sid": 309518759752338
-						}
-					]
-				},
 				{
 					"eventType": "block",
 					"conditions": [
@@ -228,12 +176,153 @@
 			"sid": 413767369214083
 		},
 		{
+			"functionName": "goToLevel",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "levelName",
+					"type": "string",
+					"initialValue": "lvl1",
+					"comment": "",
+					"sid": 790841693772743
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 577444989432541,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 244724932431089,
+							"parameters": {
+								"variable": "IS_CHANGING_LEVEL"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 214091538451178,
+							"parameters": {
+								"variable": "IS_CHANGING_LEVEL",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 650359051590334,
+							"parameters": {
+								"variable": "CHANGING_LEVEL_T",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 185372228837294,
+							"parameters": {
+								"variable": "CHANGING_LEVEL_NAME",
+								"value": "levelName"
+							}
+						}
+					],
+					"sid": 200914481437891
+				}
+			]
+		},
+		{
+			"functionName": "goToMenu",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"callFunction": "goToLevel",
+					"sid": 236224223713353,
+					"parameters": [
+						"\"menu\""
+					]
+				}
+			],
+			"sid": 768313052317652
+		},
+		{
+			"functionName": "goToLevelByNum",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "num",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 383668205058491
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 673434079209212,
+					"parameters": {
+						"variable": "IS_TIME",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 122948269272850,
+					"parameters": {
+						"variable": "IS_WIN",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 719217547636479,
+					"parameters": {
+						"variable": "cycle_time",
+						"value": "0"
+					}
+				},
+				{
+					"callFunction": "goToLevel",
+					"sid": 318380970926822,
+					"parameters": [
+						"\"lvl\"&CURRENT_LEVEL_NUM"
+					]
+				}
+			],
+			"sid": 240553894187470
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
 					"id": "on-tap-object",
 					"objectClass": "Touch",
-					"sid": 246487158372330,
+					"sid": 592026307158631,
 					"parameters": {
 						"object": "Sprite"
 					}
@@ -241,14 +330,23 @@
 			],
 			"actions": [
 				{
-					"callFunction": "goToLevel",
-					"sid": 600365873808146,
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 607497250208784,
+					"parameters": {
+						"variable": "CURRENT_LEVEL_NUM",
+						"value": "1"
+					}
+				},
+				{
+					"callFunction": "goToLevelByNum",
+					"sid": 315941309252925,
 					"parameters": [
-						"\"lvl1\""
+						"CURRENT_LEVEL_NUM"
 					]
 				}
 			],
-			"sid": 545259196918351
+			"sid": 594116797146041
 		}
 	],
 	"sid": 454245107823311

@@ -269,6 +269,15 @@
 							}
 						},
 						{
+							"id": "set-enabled",
+							"objectClass": "sPlayer",
+							"sid": 901027897300529,
+							"behaviorType": "Jumpthru",
+							"parameters": {
+								"state": "enabled"
+							}
+						},
+						{
 							"id": "set-position",
 							"objectClass": "sPlayer",
 							"sid": 822247300369761,
@@ -339,6 +348,15 @@
 							"sid": 816639931691340,
 							"parameters": {
 								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "sPlayer",
+							"sid": 987060460283968,
+							"behaviorType": "Jumpthru",
+							"parameters": {
+								"state": "disabled"
 							}
 						},
 						{

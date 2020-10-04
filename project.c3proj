@@ -201,7 +201,8 @@
 	"layouts": {
 		"items": [
 			"menu",
-			"lvl1"
+			"lvl1",
+			"lvl2"
 		],
 		"subfolders": []
 	},

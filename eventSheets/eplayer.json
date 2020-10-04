@@ -333,6 +333,21 @@
 							"parameters": {
 								"state": "not-spraying"
 							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 304453127897262,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"callFunction": "goToLevelByNum",
+							"sid": 852926729329048,
+							"parameters": [
+								"CURRENT_LEVEL_NUM"
+							]
 						}
 					],
 					"sid": 365559084802203
