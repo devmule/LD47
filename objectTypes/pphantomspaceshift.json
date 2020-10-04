@@ -1,0 +1,25 @@
+{
+	"name": "pPhantomSpaceShift",
+	"plugin-id": "Particles",
+	"sid": 814666861944654,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "lens2",
+			"name": "Lens2"
+		}
+	],
+	"image": {
+		"width": 2,
+		"height": 2,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 7546760,
+		"useCollisionPoly": true
+	}
+}

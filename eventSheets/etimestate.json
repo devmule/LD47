@@ -117,6 +117,49 @@
 						}
 					],
 					"sid": 393175807709152
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 792371982653437,
+							"parameters": {
+								"object": "sPhantom"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "sPhantom",
+							"sid": 581369555000605,
+							"parameters": {
+								"instance-variable": "moveToActiveAfter",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 986626636373493,
+							"parameters": {
+								"seconds": "sPhantom.moveToActiveAfter"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "sPhantom",
+							"sid": 783586746940848,
+							"behaviorType": "MoveTo",
+							"parameters": {
+								"enabled": true
+							}
+						}
+					],
+					"sid": 945807987284681
 				}
 			]
 		},

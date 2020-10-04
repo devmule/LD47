@@ -1174,6 +1174,168 @@
 				}
 			],
 			"sid": 640426870958588
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "phantom",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "sPlayer",
+							"sid": 461551216236083,
+							"parameters": {
+								"object": "sPhantom"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "sPlayer",
+							"sid": 471494591585263,
+							"parameters": {
+								"instance-variable": "isDead",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 156732604227634
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 560305506289989
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "pPhantomSpaceShift",
+							"sid": 758807617040377,
+							"parameters": {
+								"object": "sPhantom",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "pPhantomWhite",
+							"sid": 354578872331945,
+							"parameters": {
+								"object": "sPhantom",
+								"image-point-optional": "0"
+							}
+						}
+					],
+					"sid": 561796233704054
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 162051118858767,
+							"parameters": {
+								"object": "sPhantom"
+							}
+						},
+						{
+							"id": "is-enabled",
+							"objectClass": "sPhantom",
+							"sid": 500955034234103,
+							"behaviorType": "MoveTo"
+						},
+						{
+							"id": "is-moving",
+							"objectClass": "sPhantom",
+							"sid": 927894060594411,
+							"behaviorType": "MoveTo",
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 900324495994237,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "sPhantom",
+									"sid": 965727046850387,
+									"parameters": {
+										"instance-variable": "moveToTarget",
+										"comparison": 0,
+										"value": "\"tm\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "move-to-object",
+									"objectClass": "sPhantom",
+									"sid": 321157643149309,
+									"behaviorType": "MoveTo",
+									"parameters": {
+										"object": "sTimeMachine",
+										"image-point": "0",
+										"mode": "direct"
+									}
+								}
+							],
+							"sid": 560567633148313
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "sPhantom",
+									"sid": 158692047738629,
+									"parameters": {
+										"instance-variable": "moveToTarget",
+										"comparison": 0,
+										"value": "\"pl\""
+									}
+								},
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "sPlayer",
+									"sid": 893147370366611,
+									"parameters": {
+										"unique-id": "PLAYING_UID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "move-to-object",
+									"objectClass": "sPhantom",
+									"sid": 947006994671574,
+									"behaviorType": "MoveTo",
+									"parameters": {
+										"object": "sPlayer",
+										"image-point": "0",
+										"mode": "direct"
+									}
+								}
+							],
+							"sid": 877222969232695
+						}
+					]
+				}
+			],
+			"sid": 785016190066638
 		}
 	],
 	"sid": 319165814242184

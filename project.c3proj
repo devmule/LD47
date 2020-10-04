@@ -111,6 +111,14 @@
 			"bundled": false
 		},
 		{
+			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
+			"author": "Scirra",
+			"version": "r218",
+			"bundled": false
+		},
+		{
 			"type": "effect",
 			"id": "glowhorizontal",
 			"name": "Glow horizontal",
@@ -130,6 +138,14 @@
 			"type": "effect",
 			"id": "grayscale",
 			"name": "Grayscale",
+			"author": "Scirra",
+			"version": "r218",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "lens2",
+			"name": "Lens2",
 			"author": "Scirra",
 			"version": "r218",
 			"bundled": false
@@ -179,7 +195,10 @@
 			"sDecoration",
 			"Audio",
 			"sComicsSlide",
-			"Text"
+			"Text",
+			"sPhantom",
+			"pPhantomWhite",
+			"pPhantomSpaceShift"
 		],
 		"subfolders": []
 	},
@@ -201,6 +220,14 @@
 				"sLaserGun"
 			],
 			"selectMode": "all"
+		},
+		{
+			"members": [
+				"pPhantomSpaceShift",
+				"pPhantomWhite",
+				"sPhantom"
+			],
+			"selectMode": "wrap"
 		}
 	],
 	"families": {

@@ -1,0 +1,61 @@
+{
+	"name": "sPhantom",
+	"plugin-id": "Sprite",
+	"sid": 882498132077824,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "moveToTarget",
+			"type": "string",
+			"desc": "",
+			"sid": 334685467602321
+		},
+		{
+			"name": "moveToActiveAfter",
+			"type": "number",
+			"desc": "",
+			"sid": 596243729335824
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 467078178553826
+		},
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 938017437635650
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 128,
+						"height": 128,
+						"originX": 0.5193370165745856,
+						"originY": 0.48066298342541436,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4122075,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 819777547821903,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}
